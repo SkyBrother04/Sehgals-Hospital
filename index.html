@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sehgals Hospital & Trauma Center</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+html{scroll-behavior:smooth}
+body{background:#f8fbff;color:#111}
+
+#about-clinic {
+  padding: 90px 20px;
+  background: #f9fbff;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* IMAGE SIDE */
+.about-image {
+  position: relative;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* STATS FLOAT CARD */
+.about-stats {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  display: flex;
+  gap: 40px;
+  padding: 18px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.about-stats h4 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.about-stats span {
+  font-size: 13px;
+  color: #666;
+}
+
+/* CONTENT SIDE */
+.about-content .about-tag {
+  font-size: 14px;
+  color: #2a7fff;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.about-content h2 {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-features {
+  margin-top: 25px;
+  display: flex;
+  gap: 16px;
+}
+
+.about-features span {
+  background: #eef4ff;
+  color: #1e60ff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-content h2 {
+    font-size: 32px;
+  }
+
+  .about-stats {
+    position: static;
+    transform: none;
+    margin: 20px auto 0;
+    justify-content: center;
+  }
+}
+
+
+/* HEADER */
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 60px;background:#f3f8ff;
+  position:sticky;top:0;z-index:100
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px}
+nav a{margin:0 14px;text-decoration:none;color:#222;font-weight:500}
+.menu-toggle{display:none;font-size:26px;cursor:pointer}
+
+.btn-call{border:1px solid #ff6a00;color:#ff6a00;padding:10px 18px;border-radius:25px;text-decoration:none}
+.btn-primary{background:#ff6a00;color:#fff;padding:10px 20px;border-radius:25px;text-decoration:none}
+
+/* HERO */
+.hero{
+  display:grid;grid-template-columns:1.1fr 1fr;
+  gap:40px;padding:80px 60px;align-items:center
+}
+.badge{background:#e9f6ef;color:#1fa971;padding:6px 14px;border-radius:20px;display:inline-block;margin-bottom:20px}
+.hero h1{font-size:52px;line-height:1.15;margin-bottom:20px}
+.hero h1 span{color:#ff6a00}
+.hero p{font-size:18px;color:#555}
+.hero-buttons{margin-top:30px;display:flex;gap:15px}
+.btn-whatsapp{background:#1fa971;color:#fff;padding:14px 22px;border-radius:30px;text-decoration:none}
+.hero-stats{margin-top:25px;display:flex;gap:20px;font-size:14px;color:#444}
+
+/* SECTIONS */
+section{padding:90px 60px}
+.section-title{text-align:center;margin-bottom:15px}
+.section-title h2{font-size:40px}
+.section-desc{text-align:center;color:#555;max-width:720px;margin:0 auto 60px}
+
+/* CARDS */
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px
+}
+.why-card{
+  background:#fff;border-radius:22px;padding:30px;
+  box-shadow:0 20px 40px rgba(0,0,0,.05)
+}
+.why-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:#eef4ff;color:#ff6a00;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;margin-bottom:18px
+}
+
+/* DOCTOR CARD */
+.doctor-card{
+  display:flex;gap:25px;align-items:center
+}
+.doctor-card img{
+  width:120px;height:120px;border-radius:18px;object-fit:cover
+}
+
+/* FOOTER */
+footer{
+  background:#0f172a;color:#cbd5e1;padding:70px 60px
+}
+footer a{color:#cbd5e1;text-decoration:none}
+footer h3,footer h4{color:#fff;margin-bottom:15px}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+  position:fixed;right:20px;bottom:20px;
+  width:60px;height:60px;border-radius:50%;
+  background:#25D366;display:flex;
+  align-items:center;justify-content:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.25)
+}
+.whatsapp-float img{width:34px}
+
+/* MOBILE */
+@media(max-width:900px){
+  header{padding:20px}
+  nav{display:none;flex-direction:column;background:#f3f8ff;position:absolute;top:80px;left:0;width:100%;padding:20px}
+  nav.active{display:flex}
+  .menu-toggle{display:block}
+  .hero{grid-template-columns:1fr;padding:50px 25px}
+  .hero h1{font-size:38px}
+  section{padding:60px 25px}
+}
+</style>
+</head>
+
+<body>
+
+<style>
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 16px;
+  background:#fff;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+
+.menu-toggle{
+  font-size:22px;
+  cursor:pointer;
+  display:none;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:600;
+}
+
+.logo img{
+  height:40px;
+}
+
+nav{
+  display:flex;
+  gap:18px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+}
+
+header > div:last-child{
+  display:flex;
+  gap:10px;
+}
+
+.btn-call,
+.btn-primary{
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:14px;
+  white-space:nowrap;
+  text-decoration:none;
+  color:#fff;
+  background:#ff7a00;
+}
+
+/* Header layout */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+  nav{
+    display:none;
+  }
+  .menu-toggle{
+    display:block;
+  }
+  .header-center {
+    display: none; /* Hide center text on mobile for better UX */
+  }
+  .header-right {
+    gap: 10px;
+  }
+}
+</style>
+
+<header>
+  <div class="header-left">
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">☰</div>
+    <div class="logo" style="display:flex; align-items:center;">
+      <img src="img/logo2.PNG" alt="Sehgals Hospital Logo" style="width:130px; height:auto; display:block;">
+    </div>
+  </div>
+
+  <!-- <div class="header-center">
+    <div style="background-color: #f0f8ff; padding: 8px 12px; border-left: 3px solid #007BFF; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; font-weight: 600; color: #007BFF; font-size: 14px;">
+      India First 24*7 Dental Hospital
+    </div>
+  </div> -->
+
+  <div class="header-right">
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#about">Locations</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div>
+      <a href="tel:+919893678781" class="btn-call">Call Now</a>
+      <a href="https://wa.me/919893678781" class="btn-primary">Book Appointment</a>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  
+  <div>
+    <div class="badge">India First 24*7 Dental Hospital</div>
+    <h1>Advanced Multi-Speciality Care at <span>Sehgals Hospital</span></h1>
+    <p>Advanced multi-speciality treatment delivered under one roof with premium facilities.</p>
+
+    <div class="hero-buttons">
+      <a href="tel:+919893678781" class="btn-primary">Call Now</a>
+      <a href="https://wa.me/919893678781" class="btn-whatsapp">WhatsApp</a>
+    </div>
+
+    <div class="hero-stats">
+      <span>⭐ 4.9 Rating</span>
+      <span>✔ Verified Clinic</span>
+      <span>🕒 24×7 Emergency</span>   
+    </div>
+  </div>
+
+  <img src="img/sir.JPG" style="width:100%;border-radius:28px">
+</section>
+
+<!-- WHY CHOOSE -->
+<section id="services">
+  <div class="section-title"><h2>Why Choose Sehgals Hospital</h2></div>
+  <p class="section-desc">Experience excellence in care with trust, technology, and transparency.</p>
+
+  <div class="why-grid">
+  <div class="why-card">
+    <div class="why-icon">🦷</div>
+    <h3>Expert Procedures</h3>
+    <p>Expert Dental Implants, Orthodontics & Advanced Surgical Dental Care</p>
+  </div>
+
+  <div class="why-card">
+    <div class="why-icon">✨</div>
+    <h3>Modern Facilities</h3>
+    <p>State-of-the-art infrastructure with cutting-edge technology for safe and comfortable care.</p>
+  </div>
+
+  <div class="why-card">
+    <div class="why-icon">👥</div>
+    <h3>Personalized Care</h3>
+    <p>Customized treatment plans designed according to each patient’s unique needs.</p>
+  </div>
+
+  <div class="why-card">
+    <div class="why-icon">❤️</div>
+    <h3>Compassionate Team</h3>
+    <p>A friendly and caring team focused on your comfort and satisfaction.</p>
+  </div>
+
+  <div class="why-card">
+    <div class="why-icon">📘</div>
+    <h3>Patient Education</h3>
+    <p>Clear guidance and support before, during, and after your treatment.</p>
+  </div>
+
+  <div class="why-card">
+    <div class="why-icon">⭐</div>
+    <h3>Trusted by Hundreds</h3>
+    <p>Known for quality care and long-lasting results over the years.</p>
+  </div>
+
+  <div class="why-card">
+    <div class="why-icon">⏰</div>
+    <h3>24×7 Emergency Care</h3>
+    <p>Immediate assistance whenever you need urgent dental attention.</p>
+  </div>
+
+  <div class="why-card">
+    <div class="why-icon">🛡️</div>
+    <h3>Transparent Pricing</h3>
+    <p>Clear and honest pricing with no hidden charges.</p>
+  </div>
+</div>
+
+</section>
+
+<!-- Locations --> <section id="about"> <div class="section-tag"></div> <div class="section-title"><h2>Our Hospital Locations</h2></div> <p class="section-desc">Sehgals Hospital is available at multiple branches for your convenience. Choose the nearest location and get quality treatment without delay.</p> <div class="why-grid" style="margin-top:40px"> <div class="why-card"> <h3>📍 Sehgals Hospital – Branch 1</h3> <iframe src="https://www.google.com/maps?q=Sehgals+Hospital+Bhopal&output=embed" style="width:100%;height:200px;border:0;border-radius:12px" loading="lazy"> </iframe> </div> <div class="why-card"> <h3>📍 Sehgal General, Dental & Trauma centre – Branch 2</h3> <iframe src="https://www.google.com/maps?q=Sehgal+General+Dental+Trauma+Centre+Bhopal&output=embed" style="width:100%;height:200px;border:0;border-radius:12px" loading="lazy"> </iframe> </div> <div class="why-card"> <h3>📍 AVS Dental Clinic and implant centre – Branch 3</h3> <iframe src="https://www.google.com/maps?q=AVS+Dental+Clinic+Implant+Centre+Bhopal&output=embed" style="width:100%;height:200px;border:0;border-radius:12px" loading="lazy"> </iframe> </div> </div> </section>
+
+<style>
+  .doctor-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+  }
+
+  .doctor-row.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .doctor-img {
+    flex: 1;
+  }
+
+  .doctor-img img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .doctor-content {
+    flex: 2;
+  }
+
+  .doctor-content h3 {
+    font-size: 26px;
+    margin-bottom: 5px;
+  }
+
+  .doctor-content .role {
+    color: #ff6a00;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .doctor-content p {
+    line-height: 1.8;
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .doctor-row,
+    .doctor-row.reverse {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .doctor-img img {
+      max-width: 100%;
+    }
+  }
+</style>
+
+
+<section id="doctors">
+  <div class="section-title"><h2>Meet Our Specialists</h2></div>
+  <p class="section-desc">Experienced doctors dedicated to quality care</p>
+
+  <!-- Doctor 1 -->
+  <div class="doctor-row">
+    <div class="doctor-img">
+      <img src="drritesh.jpg" alt="Dr. Ritesh Sehgal">
+    </div>
+    <div class="doctor-content">
+      <h3>👨‍⚕️ Dr. Ritesh Sehgal</h3>
+      <div class="role">Senior Consultant | Oral & Maxillofacial Surgeon</div>
+      <p>
+        Dr. Ritesh Sehgal is an internationally trained Oral and Maxillofacial Surgeon with an MDS degree and advanced certifications from prestigious global institutions including UCSF (California), ADA, CERP, and DTI (USA).
+        <br><br>
+        He specializes in facial trauma management, advanced implantology, smile designing, and laser-assisted surgical dental treatments. Known for his precision, ethical practice, and patient-first approach, he consistently delivers safe, minimally invasive, and long-lasting results.
+        <br><br>
+        His mission is not only to treat dental and facial conditions, but to restore confidence, function, and natural aesthetics in every patient.
+      </p>
+    </div>
+  </div>
+
+  <!-- Doctor 2 -->
+  <div class="doctor-row reverse">
+    <div class="doctor-img">
+      <img src="img/dr2.jpeg" alt="Dr. Harpreet Sehgal">
+    </div>
+    <div class="doctor-content">
+      <h3>👩‍⚕️ Dr. Harpreet Sehgal</h3>
+      <div class="role">Consultant Dentist & Cosmetologist</div>
+      <p>
+        Dr. Harpreet Sehgal is a highly experienced dental professional with a strong commitment to clinical excellence and aesthetic perfection. She holds a BDS degree and has received advanced international training from UCSF, ADA, CERP, and DTI (USA).
+        <br><br>
+        She specializes in cosmetic dentistry, root canal treatments, smile enhancement, and advanced aesthetic procedures. Her expertise also extends to skin cosmetology and facial rejuvenation treatments.
+        <br><br>
+        Known for her compassionate approach, precision, and patient satisfaction, she focuses on creating healthy, confident, and beautiful smiles.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== DENTAL SERVICES GALLERY START ===== -->
+<style>
+#dental-services{
+  padding:90px 20px;
+  background:#f9fbff;
+  font-family:Arial, sans-serif;
+}
+#dental-services .section-title{
+  text-align:center;
+  margin-bottom:12px;
+}
+#dental-services .section-title h2{
+  font-size:38px;
+  font-weight:700;
+  color:#1c1c1c;
+}
+#dental-services .section-desc{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 55px;
+  color:#555;
+  line-height:1.8;
+  font-size:16px;
+}
+
+#dental-services .service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:28px;
+}
+
+#dental-services .service-card{
+  background:#fff;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 14px 40px rgba(0,0,0,0.08);
+  transition:0.35s ease;
+}
+#dental-services .service-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 22px 55px rgba(0,0,0,0.14);
+}
+
+#dental-services .service-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+
+#dental-services .service-content{
+  padding:22px;
+}
+#dental-services .service-content h4{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:8px;
+  color:#1c1c1c;
+}
+#dental-services .service-content p{
+  font-size:14.5px;
+  color:#666;
+  line-height:1.6;
+}
+
+@media(max-width:768px){
+  #dental-services .section-title h2{font-size:30px;}
+  #dental-services .service-card img{height:200px;}
+}
+</style>
+
+<section id="dental-services">
+  <div class="section-title">
+    <h2>Our Dental Treatments</h2>
+  </div>
+
+  <p class="section-desc">
+    Comprehensive and advanced dental treatments designed to restore oral health,
+    enhance smiles, and ensure long-term comfort with precision care.
+  </p>
+
+  <div class="service-grid">
+
+    <!-- <div class="service-card">
+      <img src="img/service-1.jpg" alt="General Dentistry">
+      <div class="service-content">
+        <h4>General Dental Treatment</h4>
+        <p>Complete oral care including consultation, cleaning, fillings, and preventive dentistry.</p>
+      </div>
+    </div> -->
+
+    <div class="service-card">
+      <img src="img/psi.jpg" alt="Patient Specific Implant">
+      <div class="service-content">
+        <h4>Patient Specific Implants (PSI)</h4>
+        <p>Customized implant solutions designed for precise fit, stability, and long-term success.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="img/bridge.jpg" alt="Dental Bridges">
+      <div class="service-content">
+        <h4>Dental Bridges</h4>
+        <p>Restore missing teeth with natural-looking bridges for improved function and aesthetics.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="img/service-4.jpg" alt="Teeth Whitening">
+      <div class="service-content">
+        <h4>Teeth Whitening</h4>
+        <p>Professional whitening treatments to remove stains and brighten your smile safely.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="img/rct.jpeg" alt="Root Canal Treatment">
+      <div class="service-content">
+        <h4>Root Canal Treatment</h4>
+        <p>Painless root canal procedures to save infected teeth and relieve discomfort.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="img/implant.jpg" alt="Dental Implants">
+      <div class="service-content">
+        <h4>Dental Implants</h4>
+        <p>Permanent tooth replacement solutions offering strength, durability, and natural appearance.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="img/full.webp" alt="Full Mouth Rehabilitation">
+      <div class="service-content">
+        <h4>Full Mouth Rehabilitation</h4>
+        <p>Comprehensive restoration for function, aesthetics, and complete oral health renewal.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="img/braces.jpg" alt="Braces Treatment">
+      <div class="service-content">
+        <h4>Braces Treatment</h4>
+        <p>Effective orthodontic solutions to correct misalignment and improve bite structure.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="img/aligners.jpg" alt="Aligners Treatment">
+      <div class="service-content">
+        <h4>Clear Aligners</h4>
+        <p>Invisible and comfortable aligner treatment for straightening teeth discreetly.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ===== DENTAL SERVICES GALLERY END ===== -->
+
+
+
+<section id="about-clinic">
+  <div class="about-container">
+
+    <!-- LEFT IMAGE CARD -->
+    <div class="about-image">
+      <img src="middle.jpeg" alt="Dental Excellence">
+      <div class="about-stats">
+        <div>
+          <h4>19+</h4>
+          <span>Years</span>
+        </div>
+        <div>
+          <h4>10Lakh+</h4>
+          <span>Patients</span>
+        </div>
+        <div>
+          <h4>24/7</h4>
+          <span>Open</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="about-content">
+      <span class="about-tag">About Our Clinic</span>
+
+      <h2>Excellence in Dental Care<br>Since 2007</h2>
+
+      <p>
+        Sehgals Dental & Implant Care is a leading dental clinic offering advanced
+        treatments including implants, oral surgery, orthodontics, prosthodontics,
+        and periodontal care.
+      </p>
+
+      <p>
+        With 19+ years of experience, our clinic is trusted for accuracy, comfort,
+        and patient-first care. We combine modern technology with personalized
+        treatment for the best outcomes.
+      </p>
+
+      <p>
+        Located in 3 Branch, we proudly serve patients across
+        the region with accessible, affordable, and world-class dental solutions.
+      </p>
+
+      <div class="about-features">
+        <span>Advanced Technology</span>
+        <span>Patient-First Care</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- FAQ --> <section> <div class="section-tag"></div> <div class="section-title"><h2>Frequently Asked Questions</h2></div> <div class="why-grid"> <div class="why-card">Is there a difference between dentists and orthodontists?</div> <div class="why-card">Can dentists treat orthodontic conditions?</div> <div class="why-card">How often should I visit a dentist?</div> <div class="why-card">What areas of expertise does the clinic have?</div> <div class="why-card">What are the business hours?</div> <div class="why-card">Where is the clinic located?</div> </div> </section>
+<!-- ===== PURE CSS REEL SWIPE FIXED START ===== -->
+<style>
+#testimonials{
+  padding:70px 20px;
+  background:#f9fbff;
+  display:flex;
+  justify-content:center;
+  font-family:Arial, sans-serif;
+}
+
+/* hide radios */
+input[type="radio"]{
+  display:none;
+}
+
+.reel-box{
+  width:360px;
+  position:relative;
+}
+
+/* videos */
+.reel-video{
+  width:100%;
+  height:640px;
+  border-radius:22px;
+  object-fit:cover;
+  box-shadow:0 18px 45px rgba(0,0,0,0.15);
+  display:none;
+}
+
+/* show active video */
+#v1:checked ~ .videos #video1,
+#v2:checked ~ .videos #video2,
+#v3:checked ~ .videos #video3{
+  display:block;
+}
+
+/* arrows */
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:#000000b0;
+  color:#fff;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  cursor:pointer;
+  z-index:10;
+  display:none; /* IMPORTANT */
+}
+
+.arrow.left{left:-60px;}
+.arrow.right{right:-60px;}
+
+/* show correct arrows per video */
+#v1:checked ~ .left-1,
+#v1:checked ~ .right-1{
+  display:flex;
+}
+
+#v2:checked ~ .left-2,
+#v2:checked ~ .right-2{
+  display:flex;
+}
+
+#v3:checked ~ .left-3,
+#v3:checked ~ .right-3{
+  display:flex;
+}
+
+@media(max-width:768px){
+  .reel-video{height:520px;}
+  .arrow.left{left:10px;}
+  .arrow.right{right:10px;}
+}
+</style>
+
+<section id="testimonials">
+  <div class="reel-box">
+
+    <!-- radio states -->
+    <input type="radio" name="reel" id="v1" checked>
+    <input type="radio" name="reel" id="v2">
+    <input type="radio" name="reel" id="v3">
+
+    <!-- videos --> 
+    <div class="videos">
+      <video id="video1" class="reel-video" controls autoplay muted playsinline>
+        <source src="img/testmonial1.mp4" type="video/mp4">
+      </video>
+
+      <video id="video2" class="reel-video" controls muted playsinline>
+        <source src="img/testmonial2.mp4  " type="video/mp4">
+      </video>
+
+      <video id="video3" class="reel-video" controls muted playsinline>
+        <source src="videos/reel3.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- arrows for video 1 -->
+    <label for="v3" class="arrow left left-1">‹</label>
+    <label for="v2" class="arrow right right-1">›</label>
+
+    <!-- arrows for video 2 -->
+    <label for="v1" class="arrow left left-2">‹</label>
+    <label for="v3" class="arrow right right-2">›</label>
+
+    <!-- arrows for video 3 -->
+    <label for="v2" class="arrow left left-3">‹</label>
+    <label for="v1" class="arrow right right-3">›</label>
+
+  </div>
+</section>
+<!-- ===== PURE CSS REEL SWIPE FIXED END ===== -->
+
+<style>
+footer{
+  background:#0b1220;
+  color:#e5e7eb;
+  padding:30px 15px 20px;
+  font-size:14px;
+}
+
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1.5fr;
+  gap:30px;
+}
+
+footer h3, footer h4{
+  color:#fff;
+  margin-bottom:10px;
+  font-size:16px;
+}
+
+footer a{
+  color:#e5e7eb;
+  text-decoration:none;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:25px;
+  font-size:13px;
+  color:#9ca3af;
+}
+
+.social-icons{
+  margin-top:8px;
+  display:flex;
+  gap:10px;
+}
+
+.social-icons a{
+  width:30px;
+  height:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#1f2937;
+  color:#fff;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:15px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+}
+</style>
+
+<style>
+footer{
+  background:#0b1220;
+  color:#e5e7eb;
+  padding:35px 16px 25px;
+  font-size:14px;
+}
+
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1.5fr;
+  gap:35px;
+}
+
+footer h3, footer h4{
+  color:#fff;
+  margin-bottom:12px;
+  font-size:16px;
+}
+
+footer p{
+  line-height:1.6;
+  margin:0;
+}
+
+footer a{
+  color:#e5e7eb;
+  text-decoration:none;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  font-size:13px;
+  color:#9ca3af;
+}
+
+.social-icons{
+  margin-top:10px;
+  display:flex;
+  gap:12px;
+}
+
+.social-icons a{
+  width:34px;
+  height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#1f2937;
+  border-radius:50%;
+  color:#fff;
+  font-size:15px;
+}
+
+.social-icons a:hover{
+  background:#ff7a00;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+}
+</style>
+
+<footer id="contact">
+ <div class="footer-grid">
+  <div style="
+    background: linear-gradient(135deg, #f0f8ff, #e6f2ff);
+    padding: 18px 22px;
+    border-left: 6px solid #007BFF;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    max-width: 520px;
+  ">
+    <h3 style="
+      color: #0056b3;
+      font-family: Arial, sans-serif;
+      margin-bottom: 8px;
+      font-weight: 700;
+    ">
+      Sehgals Hospital & Maxillofacial Trauma Center
+    </h3>
+
+    <p style="
+      display: inline-block;
+      background-color: #007BFF;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin: 0;
+      letter-spacing: 0.5px;
+    ">
+      India’s First 24×7 Dental Hospital
+    </p>
+  </div>
+</div>
+
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#services">Services</a><br>
+      <a href="#doctors">Doctors</a><br>
+      <a href="#about">Locations</a>
+    </div>
+
+  <div>
+  <h4>Services</h4>
+  Dental Implants<br>
+  Root Canal Treatment<br>
+  Cosmetic Dentistry<br>
+  Teeth Whitening<br>
+  Orthodontic Braces & Aligners<br>
+  Pediatric Dental Care<br>
+  Oral & Maxillofacial Surgery<br>
+  Trauma Care<br>
+  Emergency Dental Services<br>
+  General Health Checkups
+</div>
+
+
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+919893678781">+91 98936 78781</a><br>
+      Open 24 Hours
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/drriteshsehgal/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/ritesh.sehgal.925132/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://youtube.com/@dr.riteshsehgal2482?si=K6AtHEj0gNQsThyx" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Sehgals Hospital. All Rights Reserved.
+  </div>
+</footer>
+
+
+<a href="https://wa.me/919893678781" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+</body>
+</html>
